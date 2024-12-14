@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .dashboard {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            text-align: center;
+            width: 30%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .card a {
+            text-decoration: none;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            max-width: 500px;
+            margin: auto;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        form label {
+            font-weight: bold;
+        }
+
+        form input, form select, form button {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        form button {
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Library Management System</h1>
+    </header>
+
+    <div class="container">
+        <!-- Admin Dashboard -->
+        <section id="admin-dashboard" class="dashboard">
+            <div class="card">
+                <h2>Manage Books</h2>
+                <a href="#add-item">Add New Item</a>
+            </div>
+            <div class="card">
+                <h2>Manage Vendors</h2>
+                <a href="#vendor-dashboard">Vendor Dashboard</a>
+            </div>
+        </section>
+
+        <!-- Add Item Page -->
+        <section id="add-item" style="margin-top: 50px;">
+            <h2>Add New Item</h2>
+            <form action="#" method="POST">
+                <label for="title">Book Title:</label>
+                <input type="text" id="title" name="title" required>
+
+                <label for="author">Author:</label>
+                <input type="text" id="author" name="author" required>
+
+                <label for="genre">Genre:</label>
+                <select id="genre" name="genre" required>
+                    <option value="">--Select Genre--</option>
+                    <option value="fiction">Fiction</option>
+                    <option value="non-fiction">Non-Fiction</option>
+                    <option value="science">Science</option>
+                    <option value="history">History</option>
+                </select>
+
+                <label for="price">Price:</label>
+                <input type="number" id="price" name="price" required>
+
+                <button type="submit">Add Item</button>
+            </form>
+        </section>
+
+        <!-- Vendor Dashboard -->
+        <section id="vendor-dashboard" style="margin-top: 50px;">
+            <h2>Vendor Dashboard</h2>
+            <div class="dashboard">
+                <div class="card">
+                    <h3>View Inventory</h3>
+                    <a href="#">Go to Inventory</a>
+                </div>
+                <div class="card">
+                    <h3>Add Vendor</h3>
+                    <a href="#">Add New Vendor</a>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

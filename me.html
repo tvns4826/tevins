@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            display: block;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            background: white;
+            padding: 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        form label {
+            margin: 0.5rem 0 0.2rem;
+        }
+        form input, form button {
+            padding: 0.8rem;
+            margin: 0.5rem 0 1rem;
+            font-size: 1rem;
+        }
+        form button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #45a049;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #333;
+            color: white;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Library Management System</h1>
+    </header>
+    <nav>
+        <a href="#introduction">Introduction</a>
+        <a href="#login">Login</a>
+        <a href="#membership">Add Membership</a>
+        <a href="#validity">Check Validity</a>
+    </nav>
+    <div id="introduction" class="container">
+        <h1>Welcome to Our Library</h1>
+        <p>The Library Management System is designed to streamline the process of managing library members, books, and borrowings. Explore the features through the navigation above.</p>
+    </div>
+    <div id="login" class="container">
+        <h1>Login</h1>
+        <form action="#">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    <div id="membership" class="container">
+        <h1>Add Membership</h1>
+        <form action="#">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter full name" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter email" required>
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter phone number" required>
+            <button type="submit">Add Member</button>
+        </form>
+    </div>
+    <div id="validity" class="container">
+        <h1>Check Membership Validity</h1>
+        <form action="#">
+            <label for="memberID">Membership ID</label>
+            <input type="text" id="memberID" name="memberID" placeholder="Enter membership ID" required>
+            <button type="submit">Check Validity</button>
+        </form>
+    </div>
+    <footer>
+        <p>&copy; 2024 Library Management System. All rights reserved.</p>
+    </footer>
+</body>
+</html>
